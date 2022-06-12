@@ -80,7 +80,8 @@ export default () => {
 
 	const [openDatePicker, updateOpenDatePicker] = useState(false)
 
-	const onFinish = () => (
+	const onFinish = async () => {
+		await handleSubmit(onSubmit)
 		Modal.success({
 			title: 'เราได้รับข้อมูลของท่านเรียบร้อยแล้ว.',
 			visible: true,
@@ -94,7 +95,7 @@ export default () => {
 			),
 			onOk() {}
 		})
-	)
+	}
 
 	const onFailed = () => (
 		Modal.error({
@@ -116,7 +117,7 @@ export default () => {
 
 
 	return (
-		<Form name="basic" labelCol={{ span: 8 }} initialValues={{ remember: true }} onSubmitCapture={handleSubmit(onSubmit)} onFinish={onFinish} onFinishFailed={onFailed} autoComplete="off">
+		<Form name="basic" labelCol={{ span: 8 }} initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFailed} autoComplete="off">
 			<FormSectionTitle color="var(--black)">รายละเอียดของงาน</FormSectionTitle>
 			<>
 				<Controller
@@ -246,7 +247,7 @@ export default () => {
 					)}
 				/>
         <Form.Item>
-          <Button htmlType='submit'>ส่งรายละเอียด</Button>
+          <Button htmlType='submit' onClick={}>ส่งรายละเอียด</Button>
         </Form.Item>
         <p>ทีมงานจะติดต่อกลับอย่างเร็วที่สุด</p>
       </>
