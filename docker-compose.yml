@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  frontend-app:
+      container_name: frontend
+      build:
+        context: ./interview-challenge
+        dockerfile: ./Dockerfile
+      volumes:
+        - '/app/node_modules'
+        - './interview-challenge:/app'
+      ports:
+        - '3000:3000'
+      environment:
+        - VITE_BACKEND_API:http://localhost:9000
+  mock-service:
+      container_name: mock-server
+      build:
+        context: ./mock-server
+        dockerfile: ./Dockerfile
+      volumes:
+        - '/app/node_modules'
+        - './mock-server:/app'
+      ports:
+        - '9000:9000'
