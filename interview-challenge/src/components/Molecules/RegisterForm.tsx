@@ -8,6 +8,7 @@ import moment from 'moment'
 import { Button, Checkbox, Form, Input, Select, DatePicker, Modal } from 'antd'
 import { pPrefixList, tPrefixList } from '../../../config/InputPrefix'
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
+import axios from 'axios'
 
 const FormSectionTitle = styled(Paragraph)`
 	font-size: 16px;
@@ -113,7 +114,14 @@ export default () => {
 	)
 
 	const { handleSubmit, control, reset } = useForm<IFormInputs>();
-  const onSubmit: SubmitHandler<IFormInputs> = data => console.log(data);
+  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
+		try {
+			await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/submit-assistant-request`)
+			onFinish()
+		} catch (err) {
+			onFailed()
+		}
+	}
 
 
 	return (
