@@ -31,7 +31,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(dirname, './src/components')
+      "@": path.resolve(__dirname, "./src/components/"),
+    },
+  },
+  build: {
+    rollupOptions: {
+
     }
   }
 })

@@ -1,12 +1,12 @@
 // import Input from '../Atom/Input'
-import Paragraph from '../Atom/Paragraph'
-import Link from '../Atom/Link'
-import UploadInput from './UploadInput'
+import Paragraph from '@/Atom/Paragraph'
+import Link from '@/Atom/Link'
+import UploadInput from '@/Molecules/UploadInput'
 import { ReactNode, useState } from 'react'
 import styled from '@emotion/styled'
 import moment from 'moment'
 import { Button, Checkbox, Form, Input, Select, DatePicker, Modal } from 'antd'
-import { pPrefixList, tPrefixList } from '../../../config/InputPrefix'
+import { pPrefixList, tPrefixList } from '../../config/InputPrefix'
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import axios from 'axios'
 
@@ -113,16 +113,16 @@ export default () => {
 		})
 	)
 
-	const { handleSubmit, control, reset } = useForm<IFormInputs>();
+	const { handleSubmit, control } = useForm<IFormInputs>()
+
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
 		try {
-			await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/submit-assistant-request`)
+			await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/submit-assistant-request`, data)
 			onFinish()
 		} catch (err) {
 			onFailed()
 		}
 	}
-
 
 	return (
 		<Form name="basic" labelCol={{ span: 8 }} initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFailed} autoComplete="off">
@@ -255,7 +255,7 @@ export default () => {
 					)}
 				/>
         <Form.Item>
-          <Button htmlType='submit' onClick={}>ส่งรายละเอียด</Button>
+          <Button htmlType='submit'>ส่งรายละเอียด</Button>
         </Form.Item>
         <p>ทีมงานจะติดต่อกลับอย่างเร็วที่สุด</p>
       </>

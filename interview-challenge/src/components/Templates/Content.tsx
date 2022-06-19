@@ -1,9 +1,9 @@
-import Container from '../Atom/Container'
-import Typo from '../Atom/Typography'
-import Image from '../Atom/Image'
-import Column from '../Atom/Column'
+import Container from '@/Atom/Container'
+import Typo from '@/Atom/Typography'
+import Image from '@/Atom/Image'
+import Column from '@/Atom/Column'
 import styled from '@emotion/styled'
-import RegisterCard from '../Organisms/RegisterCard'
+import RegisterCard from '@/Organisms/RegisterCard'
 
 const Heading3 = styled(Typo)`
   margin-top: 0px !important;
@@ -39,7 +39,7 @@ export default () => {
         <Heading3 level={3}>Personal Assistant Service</Heading3>
         <Heading2 level={2} color="var(--primary600)">เราหาฟรีแลนซ์ให้...แค่อึดใจเดียว</Heading2>
         <Spacer />
-        <StyledImage src="/static/images/pa-step-th.png" alt="fastwork-process-step" width='480px' height='427px'/>
+        <StyledImage src="/images/pa-step-th.png" alt="fastwork-process-step" width='480px' height='427px'/>
       </Column>
       <GapRight />
       <Column col={6}>

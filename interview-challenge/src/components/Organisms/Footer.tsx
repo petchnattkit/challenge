@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { Col, Row } from 'antd'
-import Link from '../Atom/Link'
-import Paragraph from '../Atom/Paragraph'
-import FooterConfig from '../../../config/Footer.json'
-import Spacer from '../Atom/Spacer'
+import Link from '@/Atom/Link'
+import Paragraph from '@/Atom/Paragraph'
+import FooterConfig from '../../config/Footer.json'
+import Spacer from '@/Atom/Spacer'
 import { ReactNode } from 'react'
 
 const StyledFooter = styled.footer`
@@ -74,15 +74,15 @@ export default () => {
           <StyledParagraph>ติดต่อเรา</StyledParagraph>
           <StyledListContainer>
             <StyledList>
-              <img src="/static/images/email-logo.png" width="14px" height="14px" loading='lazy' />
+              <img src="/images/email-logo.png" width="14px" height="14px" loading='lazy' />
               <StyledText>hello@fastwork.co</StyledText>
             </StyledList>
             <StyledList>
-              <img src="/static/images/messenger-logo.png" width="14px" height="14px" loading='lazy' />
+              <img src="/images/messenger-logo.png" width="14px" height="14px" loading='lazy' />
               <StyledText>Facebook Messenger</StyledText>
             </StyledList>
             <StyledList>
-              <img src="/static/images/tel-logo.png" width="14px" height="14px" loading='lazy' />
+              <img src="/images/tel-logo.png" width="14px" height="14px" loading='lazy' />
               <StyledText>02-114-7008</StyledText>
             </StyledList>
             <Spacer top={12} />

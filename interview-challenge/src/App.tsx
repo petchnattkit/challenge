@@ -1,6 +1,6 @@
-import Appbar from './components/Molecules/Appbar'
-import Content from './components/Templates/Content'
-import Footer from './components/Organisms/Footer'
+import Appbar from '@/Molecules/Appbar'
+import Content from '@/Templates/Content'
+import Footer from '@/Organisms/Footer'
 import './App.css'
 
 export default () => {

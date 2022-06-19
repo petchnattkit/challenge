@@ -1,7 +1,6 @@
 import { Col, Divider, Row } from 'antd'
 import { InfoCircleOutlined } from '@ant-design/icons'
-import Paragraph from '../Atom/Paragraph'
-import Link from '../Atom/Link'
+import Link from '@/Atom/Link'
 import styled from '@emotion/styled'
 
 const StyledParagraph = styled.p`

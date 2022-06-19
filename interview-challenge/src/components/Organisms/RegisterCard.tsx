@@ -1,10 +1,9 @@
-import Card from '../Atom/Card'
-import Typo from '../Atom/Typography'
-import Paragraph from '../Atom/Paragraph'
-import { useState } from 'react'
+import Card from '@/Atom/Card'
+import Typo from '@/Atom/Typography'
+import Paragraph from '@/Atom/Paragraph'
 import styled from '@emotion/styled'
-import RegisterForm from '../Molecules/RegisterForm'
-import InvitationSection from '../Molecules/InvitationForm'
+import RegisterForm from '@/Molecules/RegisterForm'
+import InvitationSection from '@/Molecules/InvitationForm'
 
 const CardTitle = styled(Typo)`
 	text-align: center;

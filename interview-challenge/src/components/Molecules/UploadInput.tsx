@@ -2,7 +2,7 @@ import { PlusCircleOutlined } from '@ant-design/icons'
 import type { UploadProps, UploadChangeParam, UploadFile, RcFile } from 'antd/lib/upload/interface'
 import { message, Upload } from 'antd'
 import styled from '@emotion/styled'
-import Paragraph from '../Atom/Paragraph'
+import Paragraph from '@/Atom/Paragraph'
 import { useState } from 'react'
 
 const { Dragger } = Upload

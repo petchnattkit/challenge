@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import Input from '../Atom/Input'
-import Image from '../Atom/Image'
-import Link from '../Atom/Link'
+import Input from '@/Atom/Input'
+import Image from '@/Atom/Image'
+import Link from '@/Atom/Link'
 import { Layout } from 'antd';
 
 const { Header } = Layout
@@ -47,7 +47,7 @@ export default () => {
   const [keyword, updateKeyword] = useState("")
   return (
     <Appbar>
-      <Image src="static/images/logo.png" width="160px" height="30px" />
+      <Image src="/images/logo.png" width="160px" height="30px" />
       <Spacer />
       <SearchInput
         placeholder='จ้างฟรีแลนซ์ทำ...'
