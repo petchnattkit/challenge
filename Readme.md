@@ -1,4 +1,4 @@
-## PROJECT DESCRIPTION
+# PROJECT DESCRIPTION
 
 Interview Challenges
 
@@ -7,7 +7,7 @@ Interview Challenges
 assumes you installed docker in your system
 
 1. run ```docker-compose up``` on root PROJECT
-2. DONE
+2. website can be access with url - localhost:8080
 
 ## WHAT HAPPENED
 
